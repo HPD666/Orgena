@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orgena — Code Like You Speak</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6c63ff;
+      --secondary: #f9f9ff;
+      --accent: #ffb400;
+      --text: #22223b;
+      --gray: #a0a0b2;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+    }
+    .hero {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px 40px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0 0 18px 0;
+      letter-spacing: -2px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin: 0 0 30px 0;
+      color: #e0e0ff;
+    }
+    .cta-btn {
+      background: var(--accent);
+      color: var(--text);
+      border: none;
+      padding: 16px 34px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      margin-top: 8px;
+    }
+    .cta-btn:hover {
+      background: #ffd670;
+    }
+    .comparison {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px auto 0 auto;
+      max-width: 900px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 7px 30px rgba(108,99,255,0.09);
+      padding: 38px 24px 32px 24px;
+      gap: 32px;
+    }
+    .comparison-block {
+      flex: 1 1 320px;
+      min-width: 260px;
+    }
+    .comparison-block h3 {
+      margin: 0 0 10px 0;
+      color: var(--primary);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    pre {
+      background: #22223b;
+      color: #e7e7ff;
+      border-radius: 12px;
+      padding: 18px;
+      font-size: 1.05rem;
+      overflow-x: auto;
+      margin: 0;
+      font-family: 'Fira Mono', 'Consolas', monospace;
+    }
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 26px;
+      margin: 62px auto 0 auto;
+      max-width: 900px;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 3px 14px rgba(108,99,255,0.06);
+      padding: 26px 20px;
+      flex: 1 1 230px;
+      min-width: 180px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+    .feature-card strong {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+    .how-it-works {
+      max-width: 900px;
+      margin: 60px auto 0 auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(108,99,255,0.07);
+      padding: 35px 20px 30px 20px;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 15px;
+    }
+    .step {
+      flex: 1 1 160px;
+      min-width: 150px;
+      text-align: center;
+    }
+    .step-icon {
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 7px;
+      display: block;
+    }
+    .about {
+      text-align: center;
+      margin: 60px 0 18px 0;
+      color: var(--gray);
+      font-size: 0.99rem;
+    }
+    @media (max-width: 750px) {
+      .comparison, .features {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 16px;
+      }
+      .how-it-works {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Orgena — Code Like You Speak</h1>
+    <p>The easiest language for everyone.<br>No symbols, no stress—just talk to your computer.</p>
+    <button class="cta-btn" onclick="document.getElementById('comparison').scrollIntoView({behavior:'smooth'})">See How Easy</button>
+  </section>
+
+  <section id="comparison" class="comparison">
+    <div class="comparison-block">
+      <h3>Orgena</h3>
+      <pre>Say "Hello, world!"
+Remember name is "Alice"
+Say "Hello, " plus name
+If age is greater than 18, say "You are an adult."</pre>
+    </div>
+    <div class="comparison-block">
+      <h3>Python</h3>
+      <pre>print("Hello, world!")
+name = "Alice"
+print("Hello, " + name)
+if age &gt; 18:
+    print("You are an adult.")</pre>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2 style="text-align:center;margin-bottom:0;">How Orgena Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-icon">💬</span>
+        <div>Write in plain English</div>
+      </div>
+      <div class="step">
+        <span class="step-icon">⚡</span>
+        <div>Run your code instantly</div>
+      </div>
+      <div class="step">
+        <span class="step-icon">🎉</span>
+        <div>See results — no frustration!</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <strong>Plain English Syntax</strong>
+      Just write what you want. No confusing symbols or indentation.
+    </div>
+    <div class="feature-card">
+      <strong>No Setup</strong>
+      Start coding right away—no installation headaches.
+    </div>
+    <div class="feature-card">
+      <strong>Great for Beginners</strong>
+      If you can write a sentence, you can code in Orgena!
+    </div>
+    <div class="feature-card">
+      <strong>For Everyone</strong>
+      Teachers, kids, hobbyists—Orgena is for you.
+    </div>
+  </section>
+
+  <div style="text-align:center;margin:60px 0 0 0;">
+    <a href="https://github.com/HPD666/Orgena" target="_blank" class="cta-btn" style="font-size:1.15rem;">Follow Orgena on GitHub</a>
+  </div>
+
+  <div class="about">
+    Made with ❤️ by the Orgena team. <br>
+    <a href="https://github.com/HPD666/Orgena" style="color:#6c63ff;" target="_blank">Contribute or learn more on GitHub</a>
+  </div>
+</body>
+</html>
