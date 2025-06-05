@@ -140,6 +140,22 @@
       color: var(--gray);
       font-size: 0.99rem;
     }
+    /* Download button style (matches other cta-btns) */
+    .download-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #24292f;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .download-btn:hover {
+      background: #444b56;
+    }
     @media (max-width: 750px) {
       .comparison, .features {
         flex-direction: column;
@@ -157,8 +173,9 @@
   <section class="hero">
     <h1>Orgena — Code Like You Speak</h1>
     <div style="display: flex; gap: 16px;">
- </div>
-    <p>The easiest language for everyone.<br>No symbols, no stress—just talk to your computer.       Everyone knows that AI can write codes easily, but we believe that humans should not stop learning how to code.</p>
+    </div>
+    <p>The easiest language for everyone.<br>No symbols, no stress—just talk to your computer.
+    Everyone knows that AI can write codes easily, but we believe that humans should not stop learning and creating.</p>
     <button class="cta-btn" onclick="document.getElementById('comparison').scrollIntoView({behavior:'smooth'})">See How Easy</button>
   </section>
 
@@ -215,14 +232,21 @@ if age &gt; 18:
       <strong>For Everyone</strong>
       Teachers, kids, hobbyists—Orgena is for you.
       <a href="https://hpd666.github.io/Orgena-Code/?" target="_blank" style="text-decoration: none;">
-  <button style="padding: 10px 20px; font-size: 16px; background: #24292f; color: #fff; border: none; border-radius: 6px; cursor: pointer;">
-                  Launch Tutorial
-  </button>
-</a> <a href="https://hpd666.github.io/Orgena-Web/" target="_blank" style="text-decoration: none;">
-  <button style="padding: 10px 20px; font-size: 16px; background: #24292f; color: #fff; border: none; border-radius: 6px; cursor: pointer;">
-                  Launch On Web
-  </button>
-</a>
+        <button style="padding: 10px 20px; font-size: 16px; background: #24292f; color: #fff; border: none; border-radius: 6px; cursor: pointer;">
+          Launch Tutorial
+        </button>
+      </a>
+      <a href="https://hpd666.github.io/Orgena-Web/" target="_blank" style="text-decoration: none;">
+        <button style="padding: 10px 20px; font-size: 16px; background: #24292f; color: #fff; border: none; border-radius: 6px; cursor: pointer;">
+          Launch On Web
+        </button>
+      </a>
+      <!-- Download Orgena 1.0 Button -->
+      <a href="Orgena-1.0.zip" download style="text-decoration: none;">
+        <button class="download-btn">
+          ⬇️ Download Orgena 1.0
+        </button>
+      </a>
     </div>
   </section>
 
