@@ -12,6 +12,12 @@
       --accent: #ffb400;
       --text: #22223b;
       --gray: #a0a0b2;
+      --tutorial-btn: #2563eb;
+      --tutorial-btn-hover: #1d4ed8;
+      --web-btn: #22c55e;
+      --web-btn-hover: #16a34a;
+      --download-btn: #7c3aed;
+      --download-btn-hover: #5b21b6;
     }
     body {
       margin: 0;
@@ -35,21 +41,47 @@
       margin: 0 0 30px 0;
       color: #e0e0ff;
     }
-    .cta-btn {
-      background: var(--accent);
-      color: var(--text);
-      border: none;
-      padding: 16px 34px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background 0.2s;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
-      margin-top: 8px;
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 30px 0 0 0;
+      flex-wrap: wrap;
     }
-    .cta-btn:hover {
-      background: #ffd670;
+    .main-btn {
+      border: none;
+      font-size: 1.08rem;
+      font-weight: 700;
+      border-radius: 22px;
+      padding: 15px 34px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.12s;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      outline: none;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .main-btn.tutorial {
+      background: var(--tutorial-btn);
+    }
+    .main-btn.tutorial:hover, .main-btn.tutorial:focus {
+      background: var(--tutorial-btn-hover);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .main-btn.web {
+      background: var(--web-btn);
+    }
+    .main-btn.web:hover, .main-btn.web:focus {
+      background: var(--web-btn-hover);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .main-btn.download {
+      background: var(--download-btn);
+    }
+    .main-btn.download:hover, .main-btn.download:focus {
+      background: var(--download-btn-hover);
+      transform: translateY(-2px) scale(1.03);
     }
     .comparison {
       display: flex;
@@ -140,21 +172,11 @@
       color: var(--gray);
       font-size: 0.99rem;
     }
-    /* Download button style (matches other cta-btns) */
-    .download-btn {
-      padding: 10px 20px;
-      font-size: 16px;
-      background: #24292f;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: background 0.2s;
-      display: inline-block;
-    }
-    .download-btn:hover {
-      background: #444b56;
+    @media (max-width: 880px) {
+      .action-buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
     @media (max-width: 750px) {
       .comparison, .features {
@@ -172,11 +194,20 @@
 <body>
   <section class="hero">
     <h1>Orgena — Code Like You Speak</h1>
-    <div style="display: flex; gap: 16px;">
-    </div>
     <p>The easiest language for everyone.<br>No symbols, no stress—just talk to your computer.
     Everyone knows that AI can write codes easily, but we believe that humans should not stop learning and creating.</p>
-    <button class="cta-btn" onclick="document.getElementById('comparison').scrollIntoView({behavior:'smooth'})">See How Easy</button>
+    <div class="action-buttons">
+      <a href="https://hpd666.github.io/Orgena-Code/?" target="_blank" style="text-decoration:none;">
+        <button class="main-btn tutorial">📘 Launch Tutorial</button>
+      </a>
+      <a href="https://hpd666.github.io/Orgena-Web/" target="_blank" style="text-decoration:none;">
+        <button class="main-btn web">🚀 Launch On Web</button>
+      </a>
+      <a href="Orgena-1.0.zip" download style="text-decoration:none;">
+        <button class="main-btn download">⬇️ Download Orgena 1.0</button>
+      </a>
+    </div>
+    <button class="cta-btn" style="margin-top:34px;" onclick="document.getElementById('comparison').scrollIntoView({behavior:'smooth'})">See How Easy</button>
   </section>
 
   <section id="comparison" class="comparison">
@@ -231,22 +262,6 @@ if age &gt; 18:
     <div class="feature-card">
       <strong>For Everyone</strong>
       Teachers, kids, hobbyists—Orgena is for you.
-      <a href="https://hpd666.github.io/Orgena-Code/?" target="_blank" style="text-decoration: none;">
-        <button style="padding: 10px 20px; font-size: 16px; background: #24292f; color: #fff; border: none; border-radius: 6px; cursor: pointer;">
-          Launch Tutorial
-        </button>
-      </a>
-      <a href="https://hpd666.github.io/Orgena-Web/" target="_blank" style="text-decoration: none;">
-        <button style="padding: 10px 20px; font-size: 16px; background: #24292f; color: #fff; border: none; border-radius: 6px; cursor: pointer;">
-          Launch On Web
-        </button>
-      </a>
-      <!-- Download Orgena 1.0 Button -->
-      <a href="Orgena-1.0.zip" download style="text-decoration: none;">
-        <button class="download-btn">
-          ⬇️ Download Orgena 1.0
-        </button>
-      </a>
     </div>
   </section>
 
