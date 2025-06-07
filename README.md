@@ -1,5 +1,5 @@
 # Orgena — Code Like You Speak
-# What's new: Added new ai teacher to learn coding with Orgena
+# <h3> What's new: Added new ai teacher to learn coding with Orgena </h3>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 [![Try Online](https://img.shields.io/badge/Try%20Online-Orgena%20Web-blue?logo=google-chrome)](https://hpd666.github.io/Orgena-Web/)
