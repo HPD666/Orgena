@@ -54,3 +54,5 @@ For each fruit in fruits,
 End
 
 If age is greater than 18, Say "You are an adult."
+
+etc.
