@@ -13,7 +13,8 @@
 ## 🚀 What is Orgena?
 
 **Orgena** makes programming as easy as writing sentences.  
-It’s designed for learning, teaching, prototyping, and creativity—without installation or stress.
+It’s designed for learning, teaching, prototyping, and creativity—without installation or stress. Perfect for 
+beginners and to make kids love coding.
 
 - **Plain English Syntax:** Write code in natural sentences.
 - **Instant Results:** Run scripts instantly in your browser.
