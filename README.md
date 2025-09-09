@@ -1,4 +1,4 @@
-# Orgena — Code Like You Speak
+# Orgena — Code Like You Speak 🍉
 # <h3> What's new: Added new ai teacher to learn coding with Orgena </h3>
 
 # What is Orgena?
